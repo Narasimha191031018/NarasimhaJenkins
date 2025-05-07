@@ -10,13 +10,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'javac HelloWorld.java'
+                bat 'javac src/*.java'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java HelloWorld'
+                bat 'java -cp src HelloWorld'
             }
         }
     }
